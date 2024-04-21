@@ -1,0 +1,41 @@
+.todo-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease; 
+    display: flex; 
+    align-items: center;
+    border: 3px solid #ccc;
+}
+
+.todo-item.completed {
+    color: green;
+    background-color: #befdca;
+}
+
+.todo-item:not(.completed) {
+    background-color: #f0f0f0;
+}
+
+.todo-item.expired {
+    font-weight: bold;
+    color: red;
+    background-color: #ffe0e0;
+}
+
+.checkbox-wrapper {
+    margin-right: 10px;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.todo-content {
+    flex: 1;
+}
+
+.due-date {
+    margin-top: 5px;
+}   
