@@ -1,0 +1,10 @@
+<div class="todo-item" [ngClass]="{ 'completed': todo.completed, 'expired': todo.expired }">
+    <div class="checkbox-wrapper">
+        <input type="checkbox" [checked]="todo.completed" (change)="toggleCompletion()">
+    </div>
+    <div class="todo-content">
+        <span>{{ todo.title }}</span>
+        <span *ngIf="todo.expired"> - Expired</span>
+        <div class="due-date" *ngIf="todo.dueDate">Due date: {{ todo.dueDate | date }}</div>
+    </div>
+</div>
